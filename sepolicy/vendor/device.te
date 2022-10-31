@@ -1,0 +1,6 @@
+# Fingerprint
+type fingerprint_device, dev_type;
+type haptics_device, dev_type;
+
+# IR Remote
+type ircontrol_device, dev_type;

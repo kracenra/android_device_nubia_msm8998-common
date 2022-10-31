@@ -1,0 +1,35 @@
+type sysfs_prox_cal, sysfs_type, fs_type;
+type sysfs_ir_remote, sysfs_type, fs_type;
+type sysfs_rgb_cal, sysfs_type, fs_type;
+
+# Remote storage
+type debugfs_rmts, debugfs_type, fs_type;
+type debugfs_wlan, debugfs_type, fs_type;
+
+type sysfs_nubia_breathlight, sysfs_type, fs_type;
+
+type sysfs_tp_lcd, sysfs_type, fs_type;
+
+# CNE
+type cnd_core_data_file, file_type, core_data_file_type, data_file_type;
+
+type sysfs_fingerprint_wakeup, sysfs_type, fs_type;
+type sysfs_fingerprint, sysfs_type, fs_type;
+type sysfs_fingerprint_irq, sysfs_type, fs_type;
+
+type sysfs_nubia_wifi, sysfs_type, fs_type;
+
+# Input devices
+type idc_file, file_type, vendor_file_type;
+type keylayout_file, file_type, vendor_file_type;
+
+type nubiaeffects_data_file, file_type, core_data_file_type, data_file_type;
+type vendor_nubiaeffects_data_file, file_type, data_file_type, data_file_type;
+
+
+# Fpdsensor
+type fpdsensor_data_file, file_type, core_data_file_type, data_file_type;
+type persist_tas2555_file, file_type;
+type sysfs_touchscreen, sysfs_type, fs_type;
+
+type proc_alarm_boot, proc_type, fs_type;

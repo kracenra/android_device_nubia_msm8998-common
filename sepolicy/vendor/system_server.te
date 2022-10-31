@@ -1,0 +1,23 @@
+#============= system_server ==============
+
+# Audio
+allow system_server audioserver:file { rw_file_perms };
+allow system_server hal_audio_default:file { rw_file_perms };
+
+allow system_server ircontrol_device:chr_file rw_file_perms;
+allow system_server sysfs_ir_remote:file { getattr open read write };
+
+allow system_server sysfs_nubia_breathlight:file { open read write };
+allow system_server sysfs_prox_cal:file { open write };
+
+allow system_server sysfs_battery_supply:dir search;
+allow system_server sysfs_battery_supply:file { getattr open read };
+
+allow system_server sysfs_sectouch:file { rw_file_perms };
+
+get_prop(system_server, vendor_alarm_boot_prop);
+
+#allow system_server dalvikcache_data_file:file { execute write };
+
+get_prop(system_server, qcomusb_prop);
+get_prop(system_server, post_boot_prop);

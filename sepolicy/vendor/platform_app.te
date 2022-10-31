@@ -1,0 +1,11 @@
+typeattribute platform_app mlstrustedsubject;
+allow platform_app camera_data_file:dir { create_dir_perms };
+allow platform_app camera_data_file:file { create_file_perms };
+allow platform_app nubiaeffects_data_file:dir { create_dir_perms };
+allow platform_app nubiaeffects_data_file:file { create_file_perms };
+allow platform_app vendor_nubiaeffects_data_file:dir { create_dir_perms };
+allow platform_app vendor_nubiaeffects_data_file:file { create_file_perms };
+allow platform_app system_app_data_file:dir getattr;
+allow platform_app vendor_nubiaeffects_data_file:dir { add_name write };
+
+set_prop(system_app, custperf_prop);

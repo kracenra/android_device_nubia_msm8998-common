@@ -1,0 +1,15 @@
+ro.alarm_boot u:object_r:vendor_alarm_boot_prop:s0
+
+persist.camera. u:object_r:camera_prop:s0
+sys.post_boot. u:object_r:post_boot_prop:s0
+sys.usb.     u:object_r:qcomusb_prop:s0
+
+persist.sys.usb.fixedserialno  u:object_r:qcomusb_prop:s0
+
+persist.gesture.swapbuttons     u:object_r:touch_prop:s0
+# Qseecomd
+sys.listeners.registered                                      u:object_r:vendor_tee_listener_prop:s0
+
+persist.gesture.palmsleep       u:object_r:touch_prop:s0
+persist.eas.mode       u:object_r:custperf_prop:s0
+persist.cpufreq.adj       u:object_r:custperf_prop:s0

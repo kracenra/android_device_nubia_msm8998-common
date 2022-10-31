@@ -1,0 +1,17 @@
+#============= qti_init_shell ==============
+
+set_prop(qti_init_shell, qcomusb_prop);
+set_prop(qti_init_shell, ubwc_prop);
+set_prop(qti_init_shell, system_radio_prop);
+
+allow qti_init_shell sysfs:file { rw_file_perms };
+allow qti_init_shell sysfs_graphics:file rw_file_perms;
+allow qti_init_shell sysfs_cpu_boost:file { rw_file_perms };
+allow qti_init_shell vendor_radio_data_file:file create_file_perms;
+allow qti_init_shell vendor_radio_data_file:dir rw_dir_perms;
+get_prop(qti_init_shell, default_prop)
+get_prop(qti_init_shell, system_prop)
+set_prop(qti_init_shell, post_boot_prop)
+set_prop(qti_init_shell, ctl_start_prop)
+
+dontaudit qti_init_shell self:capability { dac_override dac_read_search };

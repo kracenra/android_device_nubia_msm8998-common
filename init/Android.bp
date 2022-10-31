@@ -1,0 +1,11 @@
+cc_library_static {
+    name: "libinit_nubia_msm8998",
+    recovery_available: true,
+    srcs: ["init_nubia_msm8998.cpp"],
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init",
+        "external/selinux/libselinux/include",
+        "external/libcap/libcap/include"
+    ]
+}

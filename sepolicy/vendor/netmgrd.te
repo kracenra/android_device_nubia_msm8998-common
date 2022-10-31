@@ -1,0 +1,1 @@
+allow netmgrd init:unix_stream_socket { connectto };
