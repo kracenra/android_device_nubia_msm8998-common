@@ -262,7 +262,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.mokee.snap \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineage.snap \
     persist.vendor.camera.vdbea.switch=1 \
     persist.vendor.camera.depth.focus.cb=0 \
     persist.camera.vdbea.switch=1 \
