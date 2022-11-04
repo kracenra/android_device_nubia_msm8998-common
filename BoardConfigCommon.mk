@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The MoKee Open Source Project
+# Copyright (C) 2017 The LineageOS Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -166,7 +166,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
-WITH_MOKEE_CHARGER := false
+WITH_LINEAGE_CHARGER := false
 
 TARGET_TAP_TO_WAKE_NODE :=  "/sys/class/touch/tpnode/synaptics/wake_gesture"
 
