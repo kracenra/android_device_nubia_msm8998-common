@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The MoKee Open Source Project
+# # Copyright (C) 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,18 +33,22 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
+# A/B builds require us to create the mount points at compile time.
 #Just creating it for all cases since it does not hurt.
 FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
 BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
 DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
+
 PERSIST_MOUNT_POINT := $(TARGET_ROOT_OUT)/persist
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) \
 				 $(BT_FIRMWARE_MOUNT_POINT) \
 				 $(DSP_MOUNT_POINT) \
 				 $(PERSIST_MOUNT_POINT)
+				 
 $(FIRMWARE_MOUNT_POINT):
 	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
+	
 ifneq ($(TARGET_MOUNT_POINTS_SYMLINKS),false)
 	@ln -sf /vendor/firmware_mnt $(TARGET_ROOT_OUT)/firmware
 endif
